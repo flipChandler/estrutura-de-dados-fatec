@@ -1,0 +1,143 @@
+import java.util.Scanner;
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+		/*
+		 * Ler uma temperatura em Graus Celsius, converter para Fahrenheit e exibir o resultado.
+		 */
+		Scanner scanner = new Scanner(System.in);
+		double celsius, fahrenheit;
+		System.out.println("Digite a temperatura em graus Celsius:");
+		celsius = scanner.nextDouble();
+		
+		fahrenheit = celsius * 1.8 + 32;
+		System.out.println(celsius + " graus Celsius = " + fahrenheit + " graus Fahrenheit");
+		
+		scanner.close();
+
+	}
+
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Exercicio02 {
+
+	public static void main(String[] args) {
+		/*
+		 * Ler o valor de um raio r, calcular o comprimento da circunferência, a área do círculo e o volume da esfera
+		 * correspondentes. Pesquise a classe Math do Java para o uso do PI.
+		 */
+		
+		Scanner scanner = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("#.##");
+		double r, circunferencia, areaCirculo, volumeEsfera;
+		System.out.println("Digite o valor do raio: ");
+		r = scanner.nextDouble();
+		
+		circunferencia = 2 * Math.PI * r;
+		areaCirculo = Math.PI * r * r;
+		volumeEsfera = (4 * Math.PI * r * r * r ) / 3;
+		
+		System.out.println("Tamanho do raio = " + r);
+		System.out.println("Comprimento da circunferência = " + df.format(circunferencia));
+		System.out.println("Área do círculo = " + df.format(areaCirculo));
+		System.out.println("Volume da esfera = " + df.format(volumeEsfera));
+		
+		scanner.close();
+	}
+
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Exercicio03 {
+
+	public static void main(String[] args) {
+		/*
+		 * Ler as coordenadas (x, y) de dois pontos P1 e P2, calcular a distância entre eles e exibir o resultado. 
+		 * A distância é dada por  . Pesquise na classe Math do Java para o uso da raiz quadrada. 
+		 */
+		
+		Scanner scanner = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("#.##");
+		
+		System.out.println("Digite a coordenadas x e y de P1: ");
+		int xP1 = scanner.nextInt();
+		int yP1 = scanner.nextInt();
+		
+		System.out.println("Digite a coordenadas x e y de P2: ");
+		int xP2 = scanner.nextInt();
+		int yP2 = scanner.nextInt();
+		
+		double distancia = Math.sqrt((xP2 - xP1) * (xP2 - xP1) + (yP2 - yP1) * (yP2 - yP1));
+		
+		System.out.println("Distancia entre P1 e P2 é " + df.format(distancia));
+		
+		scanner.close();
+	}
+
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class Exercicio04 {
+
+	public static void main(String[] args) {
+		/*
+		 * Ler um número inteiro e dizer se ele é par ou ímpar.
+		 */
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Digite um número inteiro: ");
+		int num = scanner.nextInt();
+		
+		String parOuImpar = num % 2 == 0 ? "par" : "impar";
+		
+		System.out.println(num + " é " + parOuImpar);
+		
+		scanner.close();
+	}
+
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class Exercicio05 {
+
+	public static void main(String[] args) {
+		/*
+		 * Ler um número inteiro e exibir a sua tabuada completa do 0 ao 10.
+		 */
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Digite um número inteiro: ");
+		int num = scanner.nextInt();
+		
+		System.out.println("-----TABUADA DO " + num + "-------");
+		for (int i = 0; i < 11; i++) {
+			System.out.println(num + " x " + i + " = " + (num * i));
+		}
+		
+		scanner.close();
+	}
+
+}
