@@ -1,5 +1,6 @@
 package intro;
 
+import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -40,20 +41,23 @@ public class EstudoOrdenacao {
 	
 	public static void main (String[] args) {
 		Scanner scanner = new Scanner (System.in);
+		
 		char continua;
 		do {
+			
 			System.out.println("digite o tamanho do vetor: ");
 			int n = scanner.nextInt();
 			int v[] = new int[n];
 			
-			exibeVetor("vetor zerado" , v);
-			
 			preencherVetor(v);
 			
-			exibeVetor("vetor preenchido" , v);
-			
+			//exibeVetor("vetor preenchido" , v);
+			Date inidate = new Date();
+			long inicio = System.currentTimeMillis();
 			ordenaVetorBubbleSort(v);
-			exibeVetor("vetor ordenado" , v);
+			long fim = System.currentTimeMillis();
+			//exibeVetor("vetor ordenado" , v);
+			System.out.println("Tempo de execução para ordenar o vetor: " + (fim - inicio) + "ms");
 			
 			System.out.println("\ndeseja continuar?");
 			scanner.nextLine();
