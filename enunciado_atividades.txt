@@ -1,0 +1,23 @@
+-------------INSERTION SORT E SELECT SORT----------------
+
+Na aula desse dia vimos o Algoritmo Bubble Sort de ordenação e fizemos um estudo sobre seu desempenho, conforme o tamanho da entrada aumenta.
+
+Existem outros algoritmos elementares: Insertion Sort e Selection Sort. 
+
+Sua tarefa: 
+
+1. visite o site https://www.ime.usp.br/~pf/algoritmos/aulas/ordena.html.
+
+O professor Paulo Feofiloff além de escrever muito bem, é bastante rigoroso na construção dos algoritmos, é um material muito rico para aprendizagem. Nesse site, estão algumas implementações dos 2 algoritmos citado.
+
+2. implemente os 2 algoritmos no seu programa e faça execuções, comparando os tempos para tamanhos de vetor 100000, 200000, 500000 e 1000000.
+
+DICA: não deixe para o último dia, é aconselhável executar os testes devagar para não fritar sua máquina.
+ 
+O que podemos dizer sobre o desempenho deles? Escreva um parágrafo, expressando sua conclusão.
+
+A entrega é um arquivo (pode ser Word), contendo uma tabela com os tempos de cada algoritmo, para cada tamanho de vetor e o seu parágrafo de conclusão.
+
+Uma observação importante é sobre a pontuação: o valor um é só para contabilizar a quantidade de tarefas realizadas.
+
+
