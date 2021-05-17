@@ -16,13 +16,13 @@ public class SelectionSortTest {
 			
 			preencherVetor(v);
 			
-			//exibirVetor("vetor preenchido" , v);
+			exibirVetor("vetor preenchido" , v);
 			
 			long inicio = new Date().getTime();
 			selectionSort(v);
 			long fim = new Date().getTime();
 			
-			//exibirVetor("vetor ordenado" , v);
+			exibirVetor("vetor ordenado" , v);
 			System.out.println("Tempo de ordenação para o tamanho " + n + ": " + (fim - inicio) + "ms");
 			
 			System.out.println("\ndeseja continuar?");
@@ -53,15 +53,17 @@ public class SelectionSortTest {
 	}
 	
 	public static void selectionSort (int v[]) {
-	   for (int i = 0; i < v.length - 1; ++i) {
-	      int min = i;
-	      for (int j = i + 1; j < v.length; ++j)
-	         if (v[j] < v[min]) {
-	        	  min = j;
+	   for (int i = 0; i < v.length - 1; i++) {
+	      int min = i; 
+	      for (int j = i + 1; j < v.length; j++) {
+	    	  if (v[j] < v[min]) { 					// procura o menor valor dentro do vetor e guarda somente sua posição
+	        	  min = j;  					    // menor posição recebe j 
 	         }
-	      int x = v[i];
+	      }
+	      
+	      int temp = v[i];						   
 	      v[i] = v[min]; 
-	      v[min] = x;
+	      v[min] = temp;
 	   }
 	}
 

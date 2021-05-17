@@ -53,16 +53,14 @@ public class InsertionSortTest {
 	}
 	
 	public static void insertionSort (int v[]) {
-		for (int i = 1; i < v.length; ++i) {
+		for (int i = 1; i < v.length; i++) {
 			int temp = v[i];
 			int j;
-			for (j = i - 1; j >= 0 && v[j] > temp; --j) {
+			for (j = i - 1; j >= 0 && v[j] > temp; j--) {
 				v[j + 1] = v[j];
 			}				
 			v[j + 1] = temp;
 		}
-	}
-	
-	
+	}	
 
 }
