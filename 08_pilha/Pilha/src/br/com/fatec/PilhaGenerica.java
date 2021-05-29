@@ -39,7 +39,9 @@ public class PilhaGenerica<T> {
 	
 	public T consultaTopo() {
 		return this.dados[this.topo - 1];
-	}	
+	}
+	
+	
 	
 
 	@Override
