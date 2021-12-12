@@ -8,12 +8,13 @@ public class Fila {
 		 this.noEntradaFila = null;
 	 }
 	 
-	 public void enqueue (No novoNo) {
-		  novoNo.setReferenciaNo(this.noEntradaFila);
-		  this.noEntradaFila = novoNo;
+	 public void enqueue (Object obj) {
+		 No novoNo = new No(obj); 
+		 novoNo.setReferenciaNo(this.noEntradaFila);
+		 this.noEntradaFila = novoNo;
 	 }
 	 
-	 public No dequeue () {
+	 public Object dequeue () {
 		 if (!this.isEmpty()) {
 			No primeiroNo = this.noEntradaFila;
 			No aux = null;
@@ -26,12 +27,12 @@ public class Fila {
 					break; 
 				}
 			}
-			return primeiroNo;
+			return primeiroNo.getObject();
 		 }
 		 return null;
 	 }
 	 
-	 public No first () {
+	 public Object first () {
 		 if (!this.isEmpty()) {
 			No primeiroNo = this.noEntradaFila;   // é o último 
 			while(true) {
@@ -41,7 +42,7 @@ public class Fila {
 					break; // até não ter referencia na frente
 				}
 			}
-			return primeiroNo;
+			return primeiroNo.getObject();
 		 }
 		 return null;
 	 }
