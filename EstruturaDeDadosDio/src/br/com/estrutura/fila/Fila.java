@@ -1,23 +1,23 @@
 package br.com.estrutura.fila;
 
-public class Fila {
+public class Fila<T> {
 	
-	 private No noEntradaFila;
+	 private No<T> noEntradaFila;
 	 
 	 public Fila() {
 		 this.noEntradaFila = null;
 	 }
 	 
-	 public void enqueue (Object obj) {
-		 No novoNo = new No(obj); 
+	 public void enqueue (T obj) {
+		 No<T> novoNo = new No<>(obj); 
 		 novoNo.setReferenciaNo(this.noEntradaFila);
 		 this.noEntradaFila = novoNo;
 	 }
 	 
-	 public Object dequeue () {
+	 public T dequeue () {
 		 if (!this.isEmpty()) {
-			No primeiroNo = this.noEntradaFila;
-			No aux = null;
+			No<T> primeiroNo = this.noEntradaFila;
+			No<T> aux = null;
 			while(true) {
 				if (primeiroNo.getReferenciaNo() != null) {  
 					aux = primeiroNo;
@@ -32,9 +32,9 @@ public class Fila {
 		 return null;
 	 }
 	 
-	 public Object first () {
+	 public T first () {
 		 if (!this.isEmpty()) {
-			No primeiroNo = this.noEntradaFila;   // é o último 
+			No<T> primeiroNo = this.noEntradaFila;   // é o último 
 			while(true) {
 				if (primeiroNo.getReferenciaNo() != null) {  // se o ultimo tiver uma referencia na frente
 					primeiroNo = primeiroNo.getReferenciaNo(); // primeiroNo passa a ser essa referencia
@@ -54,7 +54,7 @@ public class Fila {
 	 @Override
 	 public String toString() {
 		String msg = "";
-		No aux = this.noEntradaFila;
+		No<T> aux = this.noEntradaFila;
 		
 		if (this.noEntradaFila != null) {
 			while (true) {
